@@ -1,434 +1,437 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Πόροι - Παναγιώτης Δόμβρος</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Βασικές ρυθμίσεις */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.5;
-        }
-        a {
-            color: #004d99;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        /* Header */
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #004d99;
-            color: #fff;
-            padding: 1.5rem 1rem;
-            text-align: center;
-        }
-        .header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            margin-bottom: 0.75rem;
-            flex-shrink: 0;
-        }
-        .header .credit {
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-        .header .update-date {
-            font-size: 0.8rem;
-            opacity: 0.8;
-            margin-top: 0.5rem;
-        }
-        .main-title {
-            font-size: 2rem;
-            color: #004d99;
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-        /* Κοινό στυλ για ενότητες */
-        .content {
-            max-width: 1000px;
-            margin: 1.5rem auto;
-            padding: 0 1rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            border-bottom: 2px solid #004d99;
-            padding-bottom: 0.25rem;
-            color: #004d99;
-        }
-        .list-single-column p {
-            margin: 0.5rem 0;
-            font-size: 1rem;
-        }
-        .list-single-column a {
-            margin-left: 0.5rem;
-        }
-        /* Grid για αποθήκες (Repositories) */
-        .grid-repos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-        .grid-repos .item {
-            background-color: #fff;
-            padding: 0.75rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-        }
-        .grid-repos .item p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        .grid-repos .item p a {
-            margin-left: 0.25rem;
-        }
-        /* Responsive κινητές */
-        @media (max-width: 600px) {
-            .header img {
-                width: 80px;
-                height: 80px;
-            }
-            .main-title {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πόροι - Παναγιώτης Δόμβρος</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Βασικές ρυθμίσεις */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.5;
+        }
+        a {
+            color: #004d99;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #004d99;
+            color: #fff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-bottom: 0.75rem;
+            flex-shrink: 0;
+        }
+        .header .credit {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .header .update-date {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        .main-title {
+            font-size: 2rem;
+            color: #004d99;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        /* Κοινό στυλ για ενότητες */
+        .content {
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 0.25rem;
+            color: #004d99;
+        }
+        .list-single-column p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        .list-single-column a {
+            margin-left: 0.5rem;
+        }
+        /* Grid για αποθήκες (Repositories) */
+        .grid-repos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .grid-repos .item {
+            background-color: #fff;
+            padding: 0.75rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .grid-repos .item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .grid-repos .item p a {
+            margin-left: 0.25rem;
+        }
+        /* Responsive κινητές */
+        @media (max-width: 600px) {
+            .header img {
+                width: 80px;
+                height: 80px;
+            }
+            .main-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-        <header class="header">
-        <img src="teacher.png" alt="Teacher Avatar">
-        <div class="credit">
-            Created by Panagiotis Domvros 2025 (CC BY-NC)<br>
-            English Teacher – Teacher Trainer<br>
-            Principal of 1st Middle School of Pylea
-        </div>
-        <div class="update-date">Updated: 02-06-2025</div>
-    </header>
+    <!-- Header με image και credits στο κέντρο -->
+    <header class="header">
+        <img src="teacher.png" alt="Teacher Avatar">
+        <div class="credit">
+            Created by Panagiotis Domvros 2025 (CC BY-NC)<br>
+            English Teacher – Teacher Trainer<br>
+            Principal of 1st Middle School of Pylea
+        </div>
+        <div class="update-date">Updated: 02-06-2025</div>
+    </header>
 
-        <h1 class="main-title">Πόροι - Παναγιώτης Δόμβρος</h1>
+    <!-- Τίτλος σελίδας -->
+    <h1 class="main-title">Πόροι - Παναγιώτης Δόμβρος</h1>
 
-    <main class="content">
+    <main class="content">
 
-                <section class="section">
-            <h2>A. GitHub Accounts (02-06-2025)</h2>
-            <div class="list-single-column">
-                <p><strong><a href="https://github.com/pdomvros" target="_blank" rel="noopener noreferrer">https://github.com/pdomvros</a></strong></p>
-                <p><strong><a href="https://github.com/Panagiotis-Domvros" target="_blank" rel="noopener noreferrer">https://github.com/Panagiotis-Domvros</a></strong> (panagiotisdomvros1@gmail.com)</p>
-                <p><strong><a href="https://github.com/englished" target="_blank" rel="noopener noreferrer">https://github.com/englished</a></strong></p>
-                <p><strong><a href="https://github.com/PyleaMUN" target="_blank" rel="noopener noreferrer">https://github.com/PyleaMUN</a></strong></p>
-                <p><strong><a href="https://github.com/domvrosepimorfosi" target="_blank" rel="noopener noreferrer">https://github.com/domvrosepimorfosi</a></strong></p>
-                <p><strong><a href="https://github.com/domvroshub" target="_blank" rel="noopener noreferrer">https://domvroshub.github.io/works/</a></strong> (<a href="https://domvroshub.github.io/works/" target="_blank" rel="noopener noreferrer">https://domvroshub.github.io/works/</a>)</p>
-                <p><strong><a href="https://github.com/pdomvros-edu" target="_blank" rel="noopener noreferrer">https://github.com/pdomvros-edu</a></strong></p>
-            </div>
-        </section>
+        <!-- Ενότητα A: GitHub Accounts -->
+        <section class="section">
+            <h2>A. GitHub Accounts (02-06-2025)</h2>
+            <div class="list-single-column">
+                <p><strong><a href="https://github.com/pdomvros" target="_blank" rel="noopener noreferrer">https://github.com/pdomvros</a></strong></p>
+                <p><strong><a href="https://github.com/Panagiotis-Domvros" target="_blank" rel="noopener noreferrer">https://github.com/Panagiotis-Domvros</a></strong> (panagiotisdomvros1@gmail.com)</p>
+                <p><strong><a href="https://github.com/englished" target="_blank" rel="noopener noreferrer">https://github.com/englished</a></strong></p>
+                <p><strong><a href="https://github.com/PyleaMUN" target="_blank" rel="noopener noreferrer">https://github.com/PyleaMUN</a></strong></p>
+                <p><strong><a href="https://github.com/domvrosepimorfosi" target="_blank" rel="noopener noreferrer">https://github.com/domvrosepimorfosi</a></strong></p>
+                <p><strong><a href="https://github.com/domvroshub" target="_blank" rel="noopener noreferrer">https://github.com/domvroshub</a></strong> (<a href="https://domvroshub.github.io/works/" target="_blank" rel="noopener noreferrer">https://domvroshub.github.io/works/</a>)</p>
+                <p><strong><a href="https://github.com/pdomvros-edu" target="_blank" rel="noopener noreferrer">https://github.com/pdomvros-edu</a></strong></p>
+            </div>
+        </section>
 
-                <section class="section">
-            <h2>B. Repositories</h2>
-            <div class="grid-repos">
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/bullying-eng/" target="_blank" rel="noopener noreferrer">Activity about Bullying</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/argumentative-B2-voice/" target="_blank" rel="noopener noreferrer">Argumentative Essay B2 (Voice Typing)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/argumentative-B2/" target="_blank" rel="noopener noreferrer">Argumentative Essay B2</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/future-home/" target="_blank" rel="noopener noreferrer">Future Homes</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/future-job/" target="_blank" rel="noopener noreferrer">Future Jobs</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/back-to-the-future-2/" target="_blank" rel="noopener noreferrer">Future Scenarios</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/soulmate-partner/" target="_blank" rel="noopener noreferrer">Future Soulmate</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/love-hangman-en/" target="_blank" rel="noopener noreferrer">Hangman of Love</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/history-and-a-day/" target="_blank" rel="noopener noreferrer">History and a Day</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/letter-from-the-past/" target="_blank" rel="noopener noreferrer">Letters from the Past</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/draft-resolution/" target="_blank" rel="noopener noreferrer">MUN Draft Resolution Builder</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/position-paper/" target="_blank" rel="noopener noreferrer">MUN Position Paper Builder</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge1/" target="_blank" rel="noopener noreferrer">Phrase Forge 1</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge2/" target="_blank" rel="noopener noreferrer">Phrase Forge 2</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge3/" target="_blank" rel="noopener noreferrer">Phrase Forge 3</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/argument-v/" target="_blank" rel="noopener noreferrer">The Argument Builder</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/vocab-vortex1/" target="_blank" rel="noopener noreferrer">The Vocab Vortex: Spin Words, Conquer C2!</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/word-weaver2/" target="_blank" rel="noopener noreferrer">The Word Weaver 2</a></strong></p>
-                </div>
+        <!-- Ενότητα B: Repositories -->
+        <section class="section">
+            <h2>B. Repositories</h2>
+            <div class="grid-repos">
                 <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/word-weaver-extreme/" target="_blank" rel="noopener noreferrer">Word Weaver Extreme</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros-edu.github.io/word-weaver/" target="_blank" rel="noopener noreferrer">The Word Weaver</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/classical-era-quiz/" target="_blank" rel="noopener noreferrer">Quiz στην Κλασική Εποχή</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/golden-seal-race/" target="_blank" rel="noopener noreferrer">Αγώνας Δρόμου: Το Μυστήριο της Χρυσής Σφραγίδας</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/athens1/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 1)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/athens2/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 2)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/athenian-race/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 3)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/writing-article/" target="_blank" rel="noopener noreferrer">Άρθρο στη Σχολική Εφημερίδα</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/past-letters/" target="_blank" rel="noopener noreferrer">Γράμματα από το Παρελθόν (με τις ιστορίες των πρωταγωνιστών)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/epistoles-apo-to-parelthon/" target="_blank" rel="noopener noreferrer">Γράμματα από το Παρελθόν</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/bullying-gr/" target="_blank" rel="noopener noreferrer">Δραστηριότητα για τον Εκφοβισμό</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/drama-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στη Δραματική Ποίηση (Ελένη)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/literature-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στη Νεοελληνική Λογοτεχνία</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/iliad-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στην Ιλιάδα</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στην Οδύσσεια</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/helen-final/" target="_blank" rel="noopener noreferrer">Επαναληπτικές Δραστηριότητες στην Ελένη του Ευριπίδη (Γ' Γυμνασίου)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/his-a-rev1/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Α' Γυμνασίου 2</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/history-a-rev/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Α' Γυμνασίου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/history-b-rev-t-f/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Β Γυμνασίου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/iliad-final/" target="_blank" rel="noopener noreferrer">Επανάληψη στην Ιλιάδα</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/writing-letter/" target="_blank" rel="noopener noreferrer">Επιστολή</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/argumentative-gr/" target="_blank" rel="noopener noreferrer">Επιχειρηματολογικό Δοκίμιο (Εξάσκηση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/argumentative-gr-voice/" target="_blank" rel="noopener noreferrer">Επιχειρηματολογικό Δοκίμιο (Εξάσκηση με Φωνητική Καταγραφή)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/indirect-speech2/" target="_blank" rel="noopener noreferrer">Ευθύς και Πλάγιος Λόγος (Εξάσκηση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/indirect-speech1/" target="_blank" rel="noopener noreferrer">Ευθύς και Πλάγιος Λόγος (Θεωρία και Εξάσκηση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/helen-episode2/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Β επεισόδιο</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/helen-episode3/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Γ επεισόδιο</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/helen-episode4/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Δ επεισόδιο</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/sparta-rules/" target="_blank" rel="noopener noreferrer">Η Ηγεμονία της Σπάρτης (σε αμφισβήτηση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/alexander-wars/" target="_blank" rel="noopener noreferrer">Η κατάκτηση της Ανατολής από τον Αλέξανδρο</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/classical-era/" target="_blank" rel="noopener noreferrer">Η Κλασική Εποχή</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/Peloponnesian-War-Game-1/" target="_blank" rel="noopener noreferrer">Η Μάχη των Στρατηγών (Πελοποννησιακός Πόλεμος)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/ancient-nouns1/" target="_blank" rel="noopener noreferrer">Κλίση Ουσιαστικών στην Αρχαία Ελληνική</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/love-hangman-gr/" target="_blank" rel="noopener noreferrer">Κρεμάλα της Αγάπης</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/to-marry-or-not-to-marry/" target="_blank" rel="noopener noreferrer">Να το πάρεις το κορίτσι (Μελέτη Πηγών για το Αθηναϊκό Κράτος)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/Valentine-Ancient-Greece/" target="_blank" rel="noopener noreferrer">Ο Άγιος Βαλεντίνος ταξιδεύει στην Αρχαιότητα</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/plague-forensics/" target="_blank" rel="noopener noreferrer">Ο Λοιμός της Αρχαίας Αθήνας (Ancient Forensics)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey2/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία β</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey3/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία γ</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey4/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία δ</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey5d//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 10)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey5a//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 7)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey5b//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 8)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey5c//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 9)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey5-collective//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (Συνολική Θεώρηση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey-test2-4/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδίες β,γ,δ</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/odyssey//" target="_blank" rel="noopener noreferrer">Οδύσσεια: Επανάληψη</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/writing-speech/" target="_blank" rel="noopener noreferrer">Ομιλία σε Κοινό</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/ancient-riddles/" target="_blank" rel="noopener noreferrer">Παιχνίδι Γρίφων: Αρχαία Αθήνα</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/final-exams/" target="_blank" rel="noopener noreferrer">Παρουσίαση των γραπτών εξετάσεων</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/peloponnesian-war/" target="_blank" rel="noopener noreferrer">Πελοποννησιακός Πόλεμος (Παρουσίαση)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/desriptive-essay-person/" target="_blank" rel="noopener noreferrer">Περιγραφή Προσώπων</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/descriptive-essay-place/" target="_blank" rel="noopener noreferrer">Περιγραφικό Δοκίμιο: Τόποι & Εσωτερικοί Χώροι</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/helen-quotes/" target="_blank" rel="noopener noreferrer">Ποιος/ποια το είπε (Ελένη του Ευριπίδη)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://panagiotis-domvros.github.io/back-to-the-future/" target="_blank" rel="noopener noreferrer">Σενάρια του Μέλλοντος</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/figures-speech/" target="_blank" rel="noopener noreferrer">Σχήματα Λόγου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/lyomai-race/" target="_blank" rel="noopener noreferrer">Το «λύομαι» στη μέση φωνή</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/lyo-race/" target="_blank" rel="noopener noreferrer">Το «λύω» στην ενεργητική φωνή</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/alexander-work/" target="_blank" rel="noopener noreferrer">Το Έργο του Αλεξάνδρου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/macedonia-state/" target="_blank" rel="noopener noreferrer">Το Κράτος της Μακεδονίας</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/golden-seal-mystery/" target="_blank" rel="noopener noreferrer">Το Μυστήριο της Χρυσής Σφραγίδας</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-a/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Α' Γυμνασίου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-g/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Γ' Γυμνασίου (1)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-g2/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Γ' Γυμνασίου (2)</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://pdomvros.github.io/alexander-chronology/" target="_blank" rel="noopener noreferrer">Χρονολόγιο του Αλεξάνδρου</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://englished.github.io/bullying1/" target="_blank" rel="noopener noreferrer">bullying English</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://englished.github.io/bullying2/" target="_blank" rel="noopener noreferrer">bullying English</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://englished.github.io/activity1/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://englished.github.io/bullying-en/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ bullying</a></strong></p>
-                </div>
-                <div class="item">
-                    <p><strong><a href="https://englished.github.io/activity1/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ</a></strong></p>
-                </div>
-            </div>
-        </section>
+                    <p><strong><a href="https://pdomvros.github.io/bullying-eng/" target="_blank" rel="noopener noreferrer">Activity about Bullying</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/argumentative-B2-voice/" target="_blank" rel="noopener noreferrer">Argumentative Essay B2 (Voice Typing)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/argumentative-B2/" target="_blank" rel="noopener noreferrer">Argumentative Essay B2</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/future-home/" target="_blank" rel="noopener noreferrer">Future Homes</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/future-job/" target="_blank" rel="noopener noreferrer">Future Jobs</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/back-to-the-future-2/" target="_blank" rel="noopener noreferrer">Future Scenarios</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/soulmate-partner/" target="_blank" rel="noopener noreferrer">Future Soulmate</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/love-hangman-en/" target="_blank" rel="noopener noreferrer">Hangman of Love</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/history-and-a-day/" target="_blank" rel="noopener noreferrer">History and a Day</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/letter-from-the-past/" target="_blank" rel="noopener noreferrer">Letters from the Past</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/draft-resolution/" target="_blank" rel="noopener noreferrer">MUN Draft Resolution Builder</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/position-paper/" target="_blank" rel="noopener noreferrer">MUN Position Paper Builder</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge1/" target="_blank" rel="noopener noreferrer">Phrase Forge 1</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge2/" target="_blank" rel="noopener noreferrer">Phrase Forge 2</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/phrase-forge3/" target="_blank" rel="noopener noreferrer">Phrase Forge 3</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/argument-v/" target="_blank" rel="noopener noreferrer">The Argument Builder</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/vocab-vortex1/" target="_blank" rel="noopener noreferrer">The Vocab Vortex: Spin Words, Conquer C2!</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/word-weaver2/" target="_blank" rel="noopener noreferrer">The Word Weaver 2</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros-edu.github.io/word-weaver/" target="_blank" rel="noopener noreferrer">The Word Weaver</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/classical-era-quiz/" target="_blank" rel="noopener noreferrer">Quiz στην Κλασική Εποχή</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/golden-seal-race/" target="_blank" rel="noopener noreferrer">Αγώνας Δρόμου: Το Μυστήριο της Χρυσής Σφραγίδας</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/athens1/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 1)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/athens2/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 2)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/athenian-race/" target="_blank" rel="noopener noreferrer">Αθηναϊκό Κράτος (Επανάληψη 3)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/writing-article/" target="_blank" rel="noopener noreferrer">Άρθρο στη Σχολική Εφημερίδα</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/past-letters/" target="_blank" rel="noopener noreferrer">Γράμματα από το Παρελθόν (με τις ιστορίες των πρωταγωνιστών)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/epistoles-apo-to-parelthon/" target="_blank" rel="noopener noreferrer">Γράμματα από το Παρελθόν</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/bullying-gr/" target="_blank" rel="noopener noreferrer">Δραστηριότητα για τον Εκφοβισμό</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/drama-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στη Δραματική Ποίηση (Ελένη)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/literature-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στη Νεοελληνική Λογοτεχνία</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/iliad-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στην Ιλιάδα</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey-race/" target="_blank" rel="noopener noreferrer">Εισαγωγή στην Οδύσσεια</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/helen-final/" target="_blank" rel="noopener noreferrer">Επαναληπτικές Δραστηριότητες στην Ελένη του Ευριπίδη (Γ' Γυμνασίου)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/his-a-rev1/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Α' Γυμνασίου 2</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/history-a-rev/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Α' Γυμνασίου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/history-b-rev-t-f/" target="_blank" rel="noopener noreferrer">Επανάληψη Ιστορίας Β Γυμνασίου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/iliad-final/" target="_blank" rel="noopener noreferrer">Επανάληψη στην Ιλιάδα</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/writing-letter/" target="_blank" rel="noopener noreferrer">Επιστολή</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/argumentative-gr/" target="_blank" rel="noopener noreferrer">Επιχειρηματολογικό Δοκίμιο (Εξάσκηση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/argumentative-gr-voice/" target="_blank" rel="noopener noreferrer">Επιχειρηματολογικό Δοκίμιο (Εξάσκηση με Φωνητική Καταγραφή)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/indirect-speech2/" target="_blank" rel="noopener noreferrer">Ευθύς και Πλάγιος Λόγος (Εξάσκηση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/indirect-speech1/" target="_blank" rel="noopener noreferrer">Ευθύς και Πλάγιος Λόγος (Θεωρία και Εξάσκηση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/helen-episode2/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Β επεισόδιο</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/helen-episode3/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Γ επεισόδιο</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/helen-episode4/" target="_blank" rel="noopener noreferrer">Ευριπίδη, Ελένη Δ επεισόδιο</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/sparta-rules/" target="_blank" rel="noopener noreferrer">Η Ηγεμονία της Σπάρτης (σε αμφισβήτηση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/alexander-wars/" target="_blank" rel="noopener noreferrer">Η κατάκτηση της Ανατολής από τον Αλέξανδρο</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/classical-era/" target="_blank" rel="noopener noreferrer">Η Κλασική Εποχή</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/Peloponnesian-War-Game-1/" target="_blank" rel="noopener noreferrer">Η Μάχη των Στρατηγών (Πελοποννησιακός Πόλεμος)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/ancient-nouns1/" target="_blank" rel="noopener noreferrer">Κλίση Ουσιαστικών στην Αρχαία Ελληνική</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/love-hangman-gr/" target="_blank" rel="noopener noreferrer">Κρεμάλα της Αγάπης</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/to-marry-or-not-to-marry/" target="_blank" rel="noopener noreferrer">Να το πάρεις το κορίτσι (Μελέτη Πηγών για το Αθηναϊκό Κράτος)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/Valentine-Ancient-Greece/" target="_blank" rel="noopener noreferrer">Ο Άγιος Βαλεντίνος ταξιδεύει στην Αρχαιότητα</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/plague-forensics/" target="_blank" rel="noopener noreferrer">Ο Λοιμός της Αρχαίας Αθήνας (Ancient Forensics)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey2/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία β</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey3/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία γ</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey4/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία δ</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey5d//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 10)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey5a//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 7)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey5b//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 8)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey5c//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (ενότητα 9)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey5-collective//" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδία ε (Συνολική Θεώρηση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey-test2-4/" target="_blank" rel="noopener noreferrer">Οδύσσεια Ραψωδίες β,γ,δ</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/odyssey//" target="_blank" rel="noopener noreferrer">Οδύσσεια: Επανάληψη</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/writing-speech/" target="_blank" rel="noopener noreferrer">Ομιλία σε Κοινό</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/ancient-riddles/" target="_blank" rel="noopener noreferrer">Παιχνίδι Γρίφων: Αρχαία Αθήνα</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/final-exams/" target="_blank" rel="noopener noreferrer">Παρουσίαση των γραπτών εξετάσεων</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/peloponnesian-war/" target="_blank" rel="noopener noreferrer">Πελοποννησιακός Πόλεμος (Παρουσίαση)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/desriptive-essay-person/" target="_blank" rel="noopener noreferrer">Περιγραφή Προσώπων</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/descriptive-essay-place/" target="_blank" rel="noopener noreferrer">Περιγραφικό Δοκίμιο: Τόποι & Εσωτερικοί Χώροι</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/helen-quotes/" target="_blank" rel="noopener noreferrer">Ποιος/ποια το είπε (Ελένη του Ευριπίδη)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://panagiotis-domvros.github.io/back-to-the-future/" target="_blank" rel="noopener noreferrer">Σενάρια του Μέλλοντος</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/figures-speech/" target="_blank" rel="noopener noreferrer">Σχήματα Λόγου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/lyomai-race/" target="_blank" rel="noopener noreferrer">Το «λύομαι» στη μέση φωνή</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/lyo-race/" target="_blank" rel="noopener noreferrer">Το «λύω» στην ενεργητική φωνή</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/alexander-work/" target="_blank" rel="noopener noreferrer">Το Έργο του Αλεξάνδρου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/macedonia-state/" target="_blank" rel="noopener noreferrer">Το Κράτος της Μακεδονίας</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/golden-seal-mystery/" target="_blank" rel="noopener noreferrer">Το Μυστήριο της Χρυσής Σφραγίδας</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-a/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Α' Γυμνασίου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-g/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Γ' Γυμνασίου (1)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/subordinate-clauses-g2/" target="_blank" rel="noopener noreferrer">Υποτακτική Σύνδεση Γ' Γυμνασίου (2)</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://pdomvros.github.io/alexander-chronology/" target="_blank" rel="noopener noreferrer">Χρονολόγιο του Αλεξάνδρου</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://englished.github.io/bullying1/" target="_blank" rel="noopener noreferrer">bullying English</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://englished.github.io/bullying2/" target="_blank" rel="noopener noreferrer">bullying English</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://englished.github.io/activity1/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://englished.github.io/bullying-en/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ bullying</a></strong></p>
+                </div>
+                <div class="item">
+                    <p><strong><a href="https://englished.github.io/activity1/" target="_blank" rel="noopener noreferrer">ΕΠΑΛ</a></strong></p>
+                </div>
+            </div>
+        </section>
 
-                <section class="section">
-            <h2>C. Escape Rooms</h2>
-            <div class="list-single-column">
-                <p><strong><a href="https://docs.google.com/presentation/d/1EPFDaKxisv7sq3fjJoAXt1FF4um0X68I5c9LQxGlwCY/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η Έξοδος του Μεσολογγίου</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/11pubC68l3wsZLsiw0q0G3je5bFue9TPqlWZQZN3b-p4/present?usp=sharing" target="_blank" rel="noopener noreferrer">Το Ναυάγιο της Περιστέρας</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1HEeLthwJfA5SXdLML-XdNDIZdSlvbpAEeZS3shHYcRg/present?usp=sharing" target="_blank" rel="noopener noreferrer">Αρχαϊκή Εποχή: Τα γράμματα και οι τέχνες</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1FycxBv3svixsQvO6xqVxpcMg19Vp7Qg33HGrLk7mQmk/present?usp=sharing" target="_blank" rel="noopener noreferrer">Ανακεφαλαίωση Ιστορίας Α' Γυμνασίου</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1keIWPof0MVegUFy2dwA8OepQ3j2EkaolS7oxLQEOz0Q/present?usp=sharing" target="_blank" rel="noopener noreferrer">Έριδες για το ζήτημα των εικόνων</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1_vXT4LL7ErorS9nIKmslEnaDi7JbbZtZ8uSdxIe59y4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Η Δίκη της Εικονομαχίας</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/159iIW5_HJZgOFGHJW58A-nnjGx-3pFMq8jsdpHmYqaU/present?usp=sharing" target="_blank" rel="noopener noreferrer">Αρχαία Ελληνική Γλώσσα 1</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1TGlxMlZvhpfFL8HL2iHczd9_qc77Vhnl5eG36tS70Vk/present?usp=sharing" target="_blank" rel="noopener noreferrer">Ελληνική Γλώσσα 1</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/12gr7cc7GFafp02bikCDuKTMUPkJERD3tulBFordixv8/present?usp=sharing" target="_blank" rel="noopener noreferrer">First Aid Escape Room</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1QAr01U8DAxTePxeFF1EBXFIUvNgoKLwDQ9X7Vefc9Q8/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η Διάσωση του Ρωμαίου και της Ιουλιέτας (διαθεματικό)</a></strong></p>
-                <p><strong><a href="https://docs.google.com/presentation/d/1Mm3e7fPnmWna8tCp8sO9PK2iiv63neSH_zk6gcI36jg/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η απόδραση των Χριστουγέννων</a></strong></p>
-            </div>
-        </section>
+        <!-- Ενότητα C: Escape Rooms -->
+        <section class="section">
+            <h2>C. Escape Rooms</h2>
+            <div class="list-single-column">
+                <p><strong><a href="https://docs.google.com/presentation/d/1EPFDaKxisv7sq3fjJoAXt1FF4um0X68I5c9LQxGlwCY/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η Έξοδος του Μεσολογγίου</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/11pubC68l3wsZLsiw0q0G3je5bFue9TPqlWZQZN3b-p4/present?usp=sharing" target="_blank" rel="noopener noreferrer">Το Ναυάγιο της Περιστέρας</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1HEeLthwJfA5SXdLML-XdNDIZdSlvbpAEeZS3shHYcRg/present?usp=sharing" target="_blank" rel="noopener noreferrer">Αρχαϊκή Εποχή: Τα γράμματα και οι τέχνες</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1FycxBv3svixsQvO6xqVxpcMg19Vp7Qg33HGrLk7mQmk/present?usp=sharing" target="_blank" rel="noopener noreferrer">Ανακεφαλαίωση Ιστορίας Α' Γυμνασίου</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1keIWPof0MVegUFy2dwA8OepQ3j2EkaolS7oxLQEOz0Q/present?usp=sharing" target="_blank" rel="noopener noreferrer">Έριδες για το ζήτημα των εικόνων</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1_vXT4LL7ErorS9nIKmslEnaDi7JbbZtZ8uSdxIe59y4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Η Δίκη της Εικονομαχίας</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/159iIW5_HJZgOFGHJW58A-nnjGx-3pFMq8jsdpHmYqaU/present?usp=sharing" target="_blank" rel="noopener noreferrer">Αρχαία Ελληνική Γλώσσα 1</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1TGlxMlZvhpfFL8HL2iHczd9_qc77Vhnl5eG36tS70Vk/present?usp=sharing" target="_blank" rel="noopener noreferrer">Ελληνική Γλώσσα 1</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/12gr7cc7GFafp02bikCDuKTMUPkJERD3tulBFordixv8/present?usp=sharing" target="_blank" rel="noopener noreferrer">First Aid Escape Room</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1QAr01U8DAxTePxeFF1EBXFIUvNgoKLwDQ9X7Vefc9Q8/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η Διάσωση του Ρωμαίου και της Ιουλιέτας (διαθεματικό)</a></strong></p>
+                <p><strong><a href="https://docs.google.com/presentation/d/1Mm3e7fPnmWna8tCp8sO9PK2iiv63neSH_zk6gcI36jg/present?usp=sharing" target="_blank" rel="noopener noreferrer">Η απόδραση των Χριστουγέννων</a></strong></p>
+            </div>
+        </section>
 
-    </main>
+    </main>
 
 </body>
 </html>
+
